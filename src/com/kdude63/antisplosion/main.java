@@ -19,12 +19,15 @@ public class main extends JavaPlugin implements Listener
 	@EventHandler
 	public void onEntityExplode(EntityExplodeEvent e)
 	{
+		// Cancels the explosion. Still damages entities, but not blocks.
 		e.setCancelled(true);
 		
+		// Have to put these here since I can't perform toString().substring() on a primitive.
 		Double x = e.getLocation().getX();
 		Double y = e.getLocation().getY();
 		Double z = e.getLocation().getZ();
 		
+		// Log the explosion and it's world/position to the console.
 		System.out.println("AntiSplosion stopped an explosion in world '" + e.getLocation().getWorld().getName() + "'");
 		System.out.println("Coordinates of cancelled explosion are X|" + x.toString().substring(0, 2) + " Y|" + y.toString().substring(0, 2) + " Z|" + z.toString().substring(0, 2));
 	}
