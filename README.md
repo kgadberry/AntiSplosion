@@ -1,6 +1,6 @@
 ![header][]
 
-AntiSplosion is a _very_ simple mod that uses almost no resources to prevent all block damage from explosions server-wide.
+AntiSplosion is a _very_ simple plugin that uses almost no resources to prevent all block damage from explosions server-wide.
 
 This includes:
 

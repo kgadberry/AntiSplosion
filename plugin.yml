@@ -1,6 +1,6 @@
 name: AntiSplosion
 main: com.kdude63.antisplosion.main
-version: 1.1
-description: Configurable to disable explosions and Enderdragon damage.
+version: 1.4 (Build 9)
+description: Disables block damage from explosions throughout the server.
 author: kdude63
 dev-url: http://dev.bukkit.org/server-mods/antisplosion/
