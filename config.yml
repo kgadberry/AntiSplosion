@@ -3,9 +3,9 @@
 
 ghast: True
 creeper: True
-wither: False # Not reccomended as it pretty much ruins the boss battle.
-enderdragon: False # Not reccomended unless you're spawning one in the overworld.
-tnt: False # Disabled by default because most people don't have problems with TNT.
+wither: False 
+enderdragon: False # Reccomended if you're spawning one in the overworld.
+tnt: False 
 
 # Set this to false if you don't want the extra console output.
 # This is potentially bad if used with TNT, Enderdragon, or Wither set to true.
