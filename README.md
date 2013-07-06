@@ -1,6 +1,6 @@
 ![header][]
 
-AntiSplosion is a _very_ simple plugin that uses almost no resources to prevent all block damage from explosions server-wide.
+AntiSplosion is a simple plugin that prevents configurable block damage from explosions server-wide.
 
 This includes:
 
@@ -8,7 +8,7 @@ This includes:
 - TNT block damage.
 - Ghast fireball block damage.
 - Wither explosion block damage.
-- Anything else that triggers the _EntityExplode_ event.
+- Creeper block damage.
 
 You can download the compiled jarfile for use with the latest Bukkit from [here][bukkitdev].
 
