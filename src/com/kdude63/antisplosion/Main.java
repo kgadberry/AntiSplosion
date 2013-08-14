@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 //import java.util.List;
 
-public class main extends JavaPlugin implements Listener
+public class Main extends JavaPlugin implements Listener
 {
 	Logger logger = Logger.getLogger("Minecraft");
 	FileConfiguration config;

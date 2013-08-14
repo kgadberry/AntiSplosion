@@ -1,6 +1,6 @@
-name: AntiSplosion
-main: com.kdude63.antisplosion.main
-version: 1.6 (Build 10)
+name: '${project.name}'
+main: com.kdude63.antisplosion.Main
+version: '${project.version}'
 description: Disables block damage from explosions throughout the server.
 author: kdude63
-dev-url: http://dev.bukkit.org/server-mods/antisplosion/
+dev-url: '${project.url}'
