@@ -10,7 +10,7 @@ This includes:
 - Wither explosion block damage.
 - Creeper block damage.
 
-You can download the compiled jarfile for use with the latest Bukkit from [here][bukkitdev].
+You can download the latest version [here][bukkitdev].
 
 [header]: http://kdude63.com/files/bukkitplugins/AntiSplosion/images/antisplosion.png
 [bukkitdev]: http://dev.bukkit.org/server-mods/antisplosion
