@@ -85,7 +85,7 @@ public class Main extends JavaPlugin implements Listener
 
 			// Log the explosion and it's world/position to the console.
 			logger.log(Level.INFO, "AntiSplosion stopped an explosion in world '" + e.getLocation().getWorld().getName() + "'");
-            logger.log(Level.INFO, "Coordinates of cancelled explosion are X|" + x + " Y|" + y + " Z|" + z);
+            logger.log(Level.INFO, "Coordinates of cancelled explosion are X:" + x + " Y:" + y + " Z:" + z);
             logger.log(Level.INFO, "Explosion was caused by " + e.getEntityType());
 		}
 	}
