@@ -5,9 +5,10 @@ ghast: True
 creeper: True
 wither: False 
 enderdragon: False # Reccomended if you're spawning one in the overworld.
-tnt: False 
+tnt: False
+tntcart: False
 
 # Set this to false if you don't want the extra console output.
-# This is potentially bad if used with TNT, Enderdragon, or Wither set to true.
+# This is potentially bad if used with Enderdragon or Wither set to true.
 
 logging: True

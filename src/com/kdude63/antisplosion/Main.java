@@ -21,6 +21,7 @@ public class Main extends JavaPlugin implements Listener
     Boolean wither;
     Boolean creeper;
     Boolean tnt;
+    Boolean tntcart;
     Boolean ghast;
     Boolean logging;
 	
@@ -35,6 +36,7 @@ public class Main extends JavaPlugin implements Listener
         wither = config.getBoolean("wither");
         creeper = config.getBoolean("creeper");
         tnt = config.getBoolean("tnt");
+        tntcart = config.getBoolean("tntcart");
         ghast = config.getBoolean("ghast");
         logging = config.getBoolean("logging");
 	}
@@ -51,6 +53,10 @@ public class Main extends JavaPlugin implements Listener
 				if (tnt)
 					e.setCancelled(true);
 				break;
+            case MINECART_TNT:
+                if (tntcart)
+                    e.setCancelled(true);
+                break;
 			case FIREBALL:
 				if (ghast)
 					e.setCancelled(true);
