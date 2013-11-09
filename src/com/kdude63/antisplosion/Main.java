@@ -83,13 +83,10 @@ public class Main extends JavaPlugin implements Listener
 		}
 		
 		if (logging) {
-			Double xd = e.getLocation().getX();
-			Double yd = e.getLocation().getY();
-			Double zd = e.getLocation().getZ();
 
-            Integer x = xd.intValue();
-            Integer y = yd.intValue();
-            Integer z = zd.intValue();
+            Integer x = (int)e.getLocation().getX();
+            Integer y = (int)e.getLocation().getY();
+            Integer z = (int)e.getLocation().getZ();
 
 			// Log the explosion and it's world/position to the console.
 			logger.log(Level.INFO, "AntiSplosion stopped an explosion in world '" + e.getLocation().getWorld().getName() + "'");
