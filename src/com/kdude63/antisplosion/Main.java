@@ -5,7 +5,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.mcstats.Metrics;
 
 import java.io.File;
 import java.util.logging.Level;
@@ -40,13 +39,6 @@ public class Main extends JavaPlugin implements Listener
 	        tntcart = config.getBoolean("tntcart");
 	        ghast = config.getBoolean("ghast");
 	        logging = config.getBoolean("logging");
-	        
-	        try {
-		        Metrics metrics = new Metrics(this);
-		        metrics.start();
-		    } catch (java.io.IOException e) {
-		        // Failed to submit the stats :-(
-		    }
 	}
 	
 	@EventHandler

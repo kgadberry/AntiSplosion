@@ -16,22 +16,18 @@
             <id>bukkit-repo</id>
             <url>http://repo.bukkit.org/content/groups/public</url>
         </repository>
-        <repository>
-            <id>Plugin Metrics</id>
-            <url>http://repo.mcstats.org/content/repositories/public</url>
-        </repository>
     </repositories>
 
     <dependencies>
         <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.6.4-R1.0</version>
+            <version>1.6.4-R2.0</version>
             <type>jar</type>
         </dependency>
         <dependency>
             <groupId>org.mcstats.bukkit</groupId>
-            <artifactId>metrics</artifactId>
+            <artifactId>metrics-lite</artifactId>
             <version>R7</version>
             <scope>compile</scope>
         </dependency>
