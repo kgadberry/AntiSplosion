@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.kdude63</groupId>
     <artifactId>antisplosion</artifactId>
-    <version>1.7.1</version>
+    <version>1.7.2</version>
     <packaging>jar</packaging>
     <name>AntiSplosion</name>
     <url>http://github.com/kdude63/AntiSplosion</url>
@@ -33,7 +33,7 @@
             <groupId>org.mcstats.bukkit</groupId>
             <artifactId>metrics</artifactId>
             <version>R6</version>
-            <type>jar</type>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
