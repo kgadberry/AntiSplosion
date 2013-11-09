@@ -25,20 +25,27 @@ public class Main extends JavaPlugin implements Listener
     Boolean ghast;
     Boolean logging;
 	
-	public void onEnable()
-	{
+	public void onEnable()	{
+		
 		getServer().getPluginManager().registerEvents(this, this);
 		config = getConfig();
-        if (!new File(this.getDataFolder().getPath() + File.separatorChar + "config.yml").exists())
-            saveDefaultConfig();
-
-        enderdragon = config.getBoolean("enderdragon");
-        wither = config.getBoolean("wither");
-        creeper = config.getBoolean("creeper");
-        tnt = config.getBoolean("tnt");
-        tntcart = config.getBoolean("tntcart");
-        ghast = config.getBoolean("ghast");
-        logging = config.getBoolean("logging");
+	        if (!new File(this.getDataFolder().getPath() + File.separatorChar + "config.yml").exists())
+	            saveDefaultConfig();
+	
+	        enderdragon = config.getBoolean("enderdragon");
+	        wither = config.getBoolean("wither");
+	        creeper = config.getBoolean("creeper");
+	        tnt = config.getBoolean("tnt");
+	        tntcart = config.getBoolean("tntcart");
+	        ghast = config.getBoolean("ghast");
+	        logging = config.getBoolean("logging");
+	        
+	        try {
+		    Metrics metrics = new Metrics(this);
+		    metrics.start();
+		} catch (IOException e) {
+		    // Failed to submit the stats :-(
+		}
 	}
 	
 	@EventHandler
