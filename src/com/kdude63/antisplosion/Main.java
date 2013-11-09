@@ -45,7 +45,7 @@ public class Main extends JavaPlugin implements Listener
             MetricsLite metrics = new MetricsLite(this);
             metrics.start();
         } catch (java.io.IOException e) {
-            // Failed to submit the stats :-(
+            logger.log(Level.SEVERE, e.getMessage());
         }
 
     }
