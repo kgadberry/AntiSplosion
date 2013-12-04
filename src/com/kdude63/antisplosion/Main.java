@@ -41,6 +41,7 @@ public class Main extends JavaPlugin implements Listener {
 		ghast = config.getBoolean("ghast");
 		logging = config.getBoolean("logging");
 
+		// Start metrics
 		try {
 			MetricsLite metrics = new MetricsLite(this);
 			metrics.start();

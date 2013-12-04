@@ -38,7 +38,7 @@
     </dependencies>
 
     <build>
-        <finalName>AntiSplosion ${version}</finalName>
+        <finalName>AntiSplosion-${version}</finalName>
         <sourceDirectory>${basedir}/src</sourceDirectory>
         <resources>
             <resource>
