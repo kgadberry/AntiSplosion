@@ -24,7 +24,7 @@ public class Main extends JavaPlugin implements Listener {
 	Boolean tnt;
 	Boolean tntcart;
 	Boolean ghast;
-	Boolean netherbed;
+	Boolean bed;
 	Boolean logging;
 
 	public void onEnable()	{
@@ -40,7 +40,7 @@ public class Main extends JavaPlugin implements Listener {
 		tnt = config.getBoolean("tnt");
 		tntcart = config.getBoolean("tntcart");
 		ghast = config.getBoolean("ghast");
-		netherbed = config.getBoolean("netherbed");
+		bed = config.getBoolean("netherbed");
 		logging = config.getBoolean("logging");
 
 		// Start metrics
@@ -58,6 +58,7 @@ public class Main extends JavaPlugin implements Listener {
 		// Cancels the explosion based on configuration parameters. Still damages entities, but not blocks.
 
 		Boolean cancelled = false;
+		String cause = "";
 
 		if (e.getEntityType() != null){
 			switch(e.getEntityType()) {
@@ -67,37 +68,49 @@ public class Main extends JavaPlugin implements Listener {
 					if (tnt) {
 						e.setCancelled(true);
 						cancelled = true;
+						cause = "PRIMED_TNT";
 					}
 					break;
 				case MINECART_TNT:
 					if (tntcart) {
 						e.setCancelled(true);
 						cancelled = true;
+						cause = "MINECART_TNT";
 					}
 					break;
 				case FIREBALL:
 					if (ghast) {
 						e.setCancelled(true);
 						cancelled = true;
+						cause = "GHAST_FIREBALL";
 					}
 					break;
 				case WITHER_SKULL:
 					if (wither) {
 						e.setCancelled(true);
 						cancelled = true;
+						cause = "WITHER_SKULL";
 					}
 					break;
 				case CREEPER:
 					if (creeper) {
 						e.setCancelled(true);
 						cancelled = true;
+						cause = "CREEPER";
 					}
 					break;
 				case ENDER_DRAGON:
 					if (enderdragon) {
 						e.setCancelled(true);
 						cancelled = true;
+						cause = "ENDER_DRAGON";
 					}
+			}
+		}else{
+			if (bed) {
+				e.setCancelled(true);
+				cancelled = true;
+				cause = "BED";
 			}
 		}
 
@@ -108,7 +121,7 @@ public class Main extends JavaPlugin implements Listener {
 			Integer z = (int)e.getLocation().getZ();
 
 			// Log the explosion and it's world/position to the console.
-			logger.log(Level.INFO, "[AntiSplosion] Stopped an explosion in world '" + e.getLocation().getWorld().getName() + "'" + " at X:" + x + " Y:" + y + " Z:" + z + " caused by " + e.getEntityType());
+			logger.log(Level.INFO, "[AntiSplosion] Stopped an explosion in world '" + e.getLocation().getWorld().getName() + "'" + " at X:" + x + " Y:" + y + " Z:" + z + " caused by " + cause);
 		}
 	}
 }
