@@ -62,34 +62,40 @@ public class Main extends JavaPlugin implements Listener {
 			default:
 				break;
 			case PRIMED_TNT:
-				if (tnt)
+				if (tnt) {
 					e.setCancelled(true);
 					cancelled = true;
+				}
 				break;
 			case MINECART_TNT:
-				if (tntcart)
+				if (tntcart) {
 					e.setCancelled(true);
 					cancelled = true;
+				}
 				break;
 			case FIREBALL:
-				if (ghast)
+				if (ghast) {
 					e.setCancelled(true);
 					cancelled = true;
+				}
 				break;
 			case WITHER_SKULL:
-				if (wither)
+				if (wither) {
 					e.setCancelled(true);
 					cancelled = true;
+				}
 				break;	
 			case CREEPER:
-				if (creeper)
+				if (creeper) {
 					e.setCancelled(true);
 					cancelled = true;
+				}
 				break;
 			case ENDER_DRAGON:
-				if (enderdragon)
+				if (enderdragon) {
 					e.setCancelled(true);
 					cancelled = true;
+				}
 		}
 
 		if (logging && cancelled) {
@@ -99,7 +105,7 @@ public class Main extends JavaPlugin implements Listener {
 			Integer z = (int)e.getLocation().getZ();
 
 			// Log the explosion and it's world/position to the console.
-			logger.log(Level.INFO, "[AntiSplosion] Stopped an explosion in world '" + e.getLocation().getWorld().getName() + "'" + " at X: " + x + " Y: " + y + " Z: " + z + " caused by " + e.getEntityType());
+			logger.log(Level.INFO, "[AntiSplosion] Stopped an explosion in world '" + e.getLocation().getWorld().getName() + "'" + " at X:" + x + " Y:" + y + " Z:" + z + " caused by " + e.getEntityType());
 		}
 	}
 }
