@@ -24,7 +24,7 @@ public class Main extends JavaPlugin implements Listener {
 	Boolean tnt;
 	Boolean tntcart;
 	Boolean ghast;
-	Boolean bed;
+	Boolean other;
 	Boolean logging;
 
 	public void onEnable()	{
@@ -40,7 +40,7 @@ public class Main extends JavaPlugin implements Listener {
 		tnt = config.getBoolean("tnt");
 		tntcart = config.getBoolean("tntcart");
 		ghast = config.getBoolean("ghast");
-		bed = config.getBoolean("netherbed");
+		other = config.getBoolean("bed/other");
 		logging = config.getBoolean("logging");
 
 		// Start metrics
@@ -107,10 +107,10 @@ public class Main extends JavaPlugin implements Listener {
 					}
 			}
 		}else{
-			if (bed) {
+			if (other) {
 				e.setCancelled(true);
 				cancelled = true;
-				cause = "BED";
+				cause = "BED/OTHER";
 			}
 		}
 

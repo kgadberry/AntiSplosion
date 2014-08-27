@@ -4,10 +4,10 @@
 ghast: True
 creeper: True
 wither: False 
-enderdragon: False # Reccomended if you're spawning one in the overworld.
+enderdragon: False #Recommended if you're spawning one in the overworld.
 tnt: False
 tntcart: False
-netherbed: False
+bed/other: False #Explosions from beds in the nether or end, as well as potentially other explosions that I've overlooked.
 
 # Set this to false if you don't want the extra console output.
 # This is potentially bad if used with Enderdragon or Wither set to true.
