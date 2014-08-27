@@ -58,44 +58,47 @@ public class Main extends JavaPlugin implements Listener {
 		// Cancels the explosion based on configuration parameters. Still damages entities, but not blocks.
 
 		Boolean cancelled = false;
-		switch(e.getEntityType()) {
-			default:
-				break;
-			case PRIMED_TNT:
-				if (tnt) {
-					e.setCancelled(true);
-					cancelled = true;
-				}
-				break;
-			case MINECART_TNT:
-				if (tntcart) {
-					e.setCancelled(true);
-					cancelled = true;
-				}
-				break;
-			case FIREBALL:
-				if (ghast) {
-					e.setCancelled(true);
-					cancelled = true;
-				}
-				break;
-			case WITHER_SKULL:
-				if (wither) {
-					e.setCancelled(true);
-					cancelled = true;
-				}
-				break;	
-			case CREEPER:
-				if (creeper) {
-					e.setCancelled(true);
-					cancelled = true;
-				}
-				break;
-			case ENDER_DRAGON:
-				if (enderdragon) {
-					e.setCancelled(true);
-					cancelled = true;
-				}
+
+		if (e.getEntityType() != null){
+			switch(e.getEntityType()) {
+				default:
+					break;
+				case PRIMED_TNT:
+					if (tnt) {
+						e.setCancelled(true);
+						cancelled = true;
+					}
+					break;
+				case MINECART_TNT:
+					if (tntcart) {
+						e.setCancelled(true);
+						cancelled = true;
+					}
+					break;
+				case FIREBALL:
+					if (ghast) {
+						e.setCancelled(true);
+						cancelled = true;
+					}
+					break;
+				case WITHER_SKULL:
+					if (wither) {
+						e.setCancelled(true);
+						cancelled = true;
+					}
+					break;
+				case CREEPER:
+					if (creeper) {
+						e.setCancelled(true);
+						cancelled = true;
+					}
+					break;
+				case ENDER_DRAGON:
+					if (enderdragon) {
+						e.setCancelled(true);
+						cancelled = true;
+					}
+			}
 		}
 
 		if (logging && cancelled) {
