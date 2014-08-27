@@ -60,7 +60,7 @@ public class Main extends JavaPlugin implements Listener {
 		Boolean cancelled = false;
 		String cause = "";
 
-		if (e.getEntityType() != null){
+		if (e.getEntity() != null){
 			switch(e.getEntityType()) {
 				default:
 					break;
