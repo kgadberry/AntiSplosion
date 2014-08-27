@@ -24,6 +24,7 @@ public class Main extends JavaPlugin implements Listener {
 	Boolean tnt;
 	Boolean tntcart;
 	Boolean ghast;
+	Boolean netherbed;
 	Boolean logging;
 
 	public void onEnable()	{
@@ -39,6 +40,7 @@ public class Main extends JavaPlugin implements Listener {
 		tnt = config.getBoolean("tnt");
 		tntcart = config.getBoolean("tntcart");
 		ghast = config.getBoolean("ghast");
+		netherbed = config.getBoolean("netherbed");
 		logging = config.getBoolean("logging");
 
 		// Start metrics
@@ -55,44 +57,49 @@ public class Main extends JavaPlugin implements Listener {
 	public void onEntityExplode(EntityExplodeEvent e) {
 		// Cancels the explosion based on configuration parameters. Still damages entities, but not blocks.
 
+		Boolean cancelled = false;
 		switch(e.getEntityType()) {
 			default:
 				break;
 			case PRIMED_TNT:
 				if (tnt)
 					e.setCancelled(true);
+					cancelled = true;
 				break;
 			case MINECART_TNT:
 				if (tntcart)
 					e.setCancelled(true);
+					cancelled = true;
 				break;
 			case FIREBALL:
 				if (ghast)
 					e.setCancelled(true);
+					cancelled = true;
 				break;
 			case WITHER_SKULL:
 				if (wither)
 					e.setCancelled(true);
+					cancelled = true;
 				break;	
 			case CREEPER:
 				if (creeper)
 					e.setCancelled(true);
+					cancelled = true;
 				break;
 			case ENDER_DRAGON:
 				if (enderdragon)
 					e.setCancelled(true);
+					cancelled = true;
 		}
 
-		if (logging) {
+		if (logging && cancelled) {
 
 			Integer x = (int)e.getLocation().getX();
 			Integer y = (int)e.getLocation().getY();
 			Integer z = (int)e.getLocation().getZ();
 
 			// Log the explosion and it's world/position to the console.
-			logger.log(Level.INFO, "AntiSplosion stopped an explosion in world '" + e.getLocation().getWorld().getName() + "'");
-			logger.log(Level.INFO, "Coordinates of cancelled explosion are X:" + x + " Y:" + y + " Z:" + z);
-			logger.log(Level.INFO, "Explosion was caused by " + e.getEntityType());
+			logger.log(Level.INFO, "[AntiSplosion] Stopped an explosion in world '" + e.getLocation().getWorld().getName() + "'" + " at X: " + x + " Y: " + y + " Z: " + z + " caused by " + e.getEntityType());
 		}
 	}
 }
