@@ -92,6 +92,12 @@ public class Main extends JavaPlugin implements Listener {
 						cause = "WITHER_SKULL";
 					}
 					break;
+				case WITHER:
+					if (wither) {
+						e.setCancelled(true);
+						cancelled = true;
+						cause = "WITHER";
+					}
 				case CREEPER:
 					if (creeper) {
 						e.setCancelled(true);
