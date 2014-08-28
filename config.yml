@@ -10,6 +10,6 @@ tntcart: False
 bed/other: False #Explosions from beds in the nether or end, as well as potentially other explosions that I've overlooked.
 
 # Set this to false if you don't want the extra console output.
-# This is potentially bad if used with Enderdragon or Wither set to true.
+# This is potentially spammy if used with enderdragon or wither set to true.
 
 logging: True
