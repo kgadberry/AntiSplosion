@@ -12,8 +12,6 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-//import java.util.List;
-
 public class Main extends JavaPlugin implements Listener {
 	Logger logger = Logger.getLogger("Minecraft");
 	FileConfiguration config;
