@@ -14,4 +14,4 @@ You can download the latest version [here][bukkitdev].
 (Doesn't work on Spigot 1.9)
 
 [header]: http://kdude63.com/files/bukkitplugins/AntiSplosion/images/antisplosion.png
-[bukkitdev]: http://dev.bukkit.org/server-mods/antisplosion
+[bukkitdev]: http://dev.bukkit.org/projects/antisplosion
